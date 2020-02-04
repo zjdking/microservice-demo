@@ -1,0 +1,31 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: microservicecloud-zuul-gateway
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+
+
+info:
+  app.name: microcloud
+  company.name: www.atguigu.com
+  build.artifactId: "@project.artifactId@"
+  build.version: "@project.version@"
+
+zuul:
+  routes:
+   mydept.serviceId: microservicecloud-dept   #将这个微服务名称映射成 下边的  mydept.serviceId 什么意思？
+   mydept.path: /mydept/**
+  ignored-services: "*"     #忽略掉原来的microservicecloud-dept   如果想屏蔽所有的微服务直接用 "*"
+  prefix: /atguigu          #为微服务添加同一的前缀；
+
+

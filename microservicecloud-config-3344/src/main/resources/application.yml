@@ -1,0 +1,19 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name:  microservicecloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zjdking/microservicecloud-config.git #GitHub上面的git仓库名字   使用下边的方式居然不能从远程库拉去；真是坑
+#          uri: git@github.com:zjdking/microservicecloud-config.git #GitHub上面的git仓库名字
+          force-pull: true #设置强行pull拉取
+          username: 718379629@qq.com
+          password: zjdking730692
+# 如果是公用的就不需要书写用户名和密码；我这里用的是私有的；
+# 这相当于是一个总的 server端；用来从远程拉去；
+
+

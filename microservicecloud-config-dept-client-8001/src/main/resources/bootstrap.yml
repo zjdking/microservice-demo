@@ -1,0 +1,8 @@
+# 这个是系统的，他加载是在application.yml之前；
+spring:
+  cloud:
+    config:
+      name: microservicecloud-config-dept-client # 注意这个是没有yml后缀的，通过这个名字子github上边获取配置
+      profile: dev
+      label: master
+      uri: http://config-3344.com:3344   # Cloud config server 的地址
