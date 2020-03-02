@@ -27,7 +27,7 @@ public class DeptController {
         return deptService.add(dept);
     }
     @RequestMapping(value = "/dept/get/{id}",method = RequestMethod.GET)
-    public Dept get(@PathVariable Long id){ // 可以获取到 {} 中的参数值
+    public Dept get(@ PathVariable  Long id){ // 可以获取到 {} 中的参数值
         return deptService.get(id);
     }
     @RequestMapping(value = "/dept/list" ,method = RequestMethod.GET)
