@@ -33,4 +33,4 @@ CAP 理论？
 6. config
     同一的配置中心，CS架构； client-->server-->github
 
-
+git test
